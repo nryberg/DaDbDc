@@ -30,6 +30,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem "mongo_mapper"
+gem "haml"
+gem "zurb-foundation"
+gem "foundation-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -41,3 +45,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#
+group :development, :test do
+  gem "rspec-rails"
+  gem "capybara"
+end
+
+
