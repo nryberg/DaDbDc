@@ -11,7 +11,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module DatabaseDoct
+module DaDbDc
   class Application < Rails::Application
     config.generators do |g|
       g.test_framework :rspec
