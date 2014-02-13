@@ -31,6 +31,7 @@ group :doc do
 end
 
 gem "mongo_mapper"
+gem "bson_ext"
 gem "haml"
 gem "zurb-foundation"
 gem "foundation-rails"
