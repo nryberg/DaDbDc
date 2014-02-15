@@ -1,4 +1,4 @@
 DaDbDc::Application.routes.draw do
-  root 'translation#index'
-  resources :translations
+  root 'template#index'
+  resources :templates
 end

@@ -1,0 +1,14 @@
+development:
+  adapter: MongoDB
+  host: localhost
+  database: DaDbDc-dev-db
+
+test:
+  adapter: MongoDB
+  host: localhost
+  database: DaDbDc-test-db
+
+production:
+  adapter: MongoDB
+  host: localhost
+  database: DaDbDc-production-db
