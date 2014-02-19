@@ -52,6 +52,7 @@ gem "libv8"
 group :development, :test do
   gem "rspec-rails"
   gem "capybara"
+  gem "thin"
 end
 
 group :test do

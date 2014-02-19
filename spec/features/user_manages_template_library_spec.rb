@@ -9,10 +9,10 @@ feature 'User can manage template library : ' do
   scenario 'Adds a template to the library' do
     visit root_path
     click_link 'Add Template'
-    fill_in 'Database', with: 'Teradata'
+    fill_in 'Platform', with: 'Teradata'
     click_button 'Add to Templates'
     
-    within('#library') do
+    within(:css, '#templates') do
       expect(page).to have_content('Teradata')
     end
 

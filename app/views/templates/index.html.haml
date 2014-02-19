@@ -1,3 +1,6 @@
 %h2 Welcome to the template library
 
 = link_to 'Add Template', new_template_path
+
+#templates
+  = render partial: "template", collection: @templates
