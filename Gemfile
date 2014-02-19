@@ -30,11 +30,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem "mongo_mapper"
+#gem "mongo_mapper"
+gem 'mongo_mapper', :git => "git://github.com/mongomapper/mongomapper.git", :tag => "v0.13.0.beta2"
 gem "bson_ext"
 gem "haml"
 gem "zurb-foundation"
 gem "foundation-rails"
+gem "libv8"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

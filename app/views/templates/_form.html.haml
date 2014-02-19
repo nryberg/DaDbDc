@@ -1,10 +1,9 @@
-%form
+= form_for(@template) do |f|
   .row
     .large-6.columns
       %label 
         Database
-        %input{:type => "text", :placeholder=>"large-12.columns"}
+        %input{:type => "text", :placeholder=>"Datatbase Name"}
   .row
     .small-9.small-offset-3.columns
-      %= f.submit
-
+      %input{:type => "submit", :value=>"Add to Templates"}
