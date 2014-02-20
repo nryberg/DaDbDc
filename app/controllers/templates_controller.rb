@@ -15,6 +15,6 @@ class TemplatesController < ApplicationController
   end
 
   def show
-    @template = Template.find(:id)
+    @template = Template.find(params[:id])
   end
 end

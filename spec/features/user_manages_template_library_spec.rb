@@ -23,7 +23,25 @@ feature 'User can manage template library : ' do
       expect(page).to have_content('Teradata')
       expect(page).to have_content('PROD_V')
     end
-
   end
+
+  scenario 'Views a template in the library' do
+    visit root_path
+    click_link 'Add Template'
+    fill_in 'Platform', with: 'Teradata'
+    click_button 'Add to Templates'
+    click_link("Teradata", :match => :first)
+  end
+
+   scenario 'Edits a template in the library' do
+    visit root_path
+    click_link 'Add Template'
+    fill_in 'Platform', with: 'Teradata'
+    click_button 'Add to Templates'
+    click_link("Teradata", :match => :first)
+
+    click_button 'Change template'
+  end
+
 end
 
