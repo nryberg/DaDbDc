@@ -17,7 +17,7 @@ feature 'User can manage template library : ' do
     fill_in 'Column format', with: 'My Column Format'
     fill_in 'Column precision', with: 'My Column Precision'
     fill_in 'Column scale', with: 'My Column Scale'
-    click_button 'Add to Templates'
+    click_button 'Enter Template'
     
     within(:css, '#templates') do
       expect(page).to have_content('Teradata')
@@ -29,7 +29,7 @@ feature 'User can manage template library : ' do
     visit root_path
     click_link 'Add Template'
     fill_in 'Platform', with: 'Teradata'
-    click_button 'Add to Templates'
+    click_button 'Enter Template'
     click_link("Teradata", :match => :first)
   end
 
@@ -37,10 +37,14 @@ feature 'User can manage template library : ' do
     visit root_path
     click_link 'Add Template'
     fill_in 'Platform', with: 'Teradata'
-    click_button 'Add to Templates'
-    click_link("Teradata", :match => :first)
+    click_button 'Enter Template'
+    click_link 'Teradata'
 
-    click_button 'Change template'
+    click_link 'Change template'
+    fill_in 'Platform', with: 'Oracle'
+    
+    click_button 'Enter Template'
+    #save_and_open_page
   end
 
 end

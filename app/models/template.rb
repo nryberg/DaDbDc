@@ -9,5 +9,6 @@ class Template
   key :column_precision, String
   key :column_scale, String
   key :sample_sql, String
+  key :notes, String
 
 end

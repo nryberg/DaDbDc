@@ -17,4 +17,16 @@ class TemplatesController < ApplicationController
   def show
     @template = Template.find(params[:id])
   end
+
+  def edit
+    @template = Template.find(params[:id])
+  end
+
+  def update
+    @template = Template.find(params[:id])
+    @template.update_attributes(params[:template])
+    if @template.save
+      redirect_to action: "index"
+    end
+  end
 end
