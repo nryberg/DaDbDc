@@ -1,6 +1,10 @@
 %h2 Welcome to the template library
 
-= link_to 'Add Template', new_template_path
-
 #templates
-  = render partial: "template", collection: @templates
+  %table
+    %tr
+      %th Platform
+      %th Database
+    = render partial: "template", collection: @templates
+
+= link_to 'Add Template', new_template_path, class: "button radius"

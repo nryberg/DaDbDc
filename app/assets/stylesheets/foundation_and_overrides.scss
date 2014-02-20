@@ -6,7 +6,7 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
-$rem-base: 16px;
+// $rem-base: 16px;
 
 // $experimental: true;
 
@@ -33,7 +33,6 @@ $rem-base: 16px;
 
 // $row-width: rem-calc(1000);
 // $column-gutter: rem-calc(30);
-//$column-gutter: 15px;
 // $total-columns: 12;
 
 // We use these to control various global styles

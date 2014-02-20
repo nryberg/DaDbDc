@@ -1,1 +1,7 @@
-%h2 Welcome to the translation library
+%h2 Welcome to the template library
+
+= link_to 'Add Template', new_template_path
+
+#templates
+  = @templates.each do |template|
+    %p= template.database

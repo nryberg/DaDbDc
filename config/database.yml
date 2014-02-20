@@ -4,11 +4,11 @@ development: &global_settings
   port: 27017
 
 test:
-  database: dadbdc_test
   <<: *global_settings
+  database: dadbdc_test
 
 production:
+  <<: *global_settings
   database: dadbdc_prod
   #username: username
   #password: password
-  <<: *global_settings
