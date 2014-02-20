@@ -8,5 +8,6 @@ class Template
   key :column_format, String
   key :column_precision, String
   key :column_scale, String
+  key :sample_sql, String
 
 end

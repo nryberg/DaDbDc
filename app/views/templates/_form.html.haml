@@ -40,6 +40,11 @@
     .small-9.columns
       = f.text_field :column_scale
   .row
+    .small-3.columns
+      .right.inline= f.label :sample_sql
+    .small-9.columns
+      = f.text_area :sample_sql 
+  .row
     .small-9.small-offset-3.columns
       / %input{:type => "submit", :value=>"Add to Templates"}
       = f.submit "Add to Templates"
