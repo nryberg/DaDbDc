@@ -1,4 +1,26 @@
-%h2 Template
-%h3= @template.platform
+%h3 
+  Template
+.large-1-offset.columns
+  .row
+    %strong.large-2.column 
+      Platform
+    .large-9.columns
+      = @template.platform
+  .row
+    %strong.large-2.column 
+      Database
+    .large-9.columns
+      = @template.database_name
+  .row
+    %strong.large-2.column 
+      Table Name
+    .large-9.columns
+      = @template.table_name
+%h4
+  Test
+.value
+  Fred
+
+
 
 = link_to 'Change template', edit_template_path, class: "button radius"

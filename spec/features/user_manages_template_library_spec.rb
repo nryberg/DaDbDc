@@ -9,6 +9,7 @@ feature 'User can manage template library : ' do
   scenario 'Adds a template to the library' do
     visit root_path
     click_link 'Add Template'
+    #save_and_open_page 
     fill_in 'Platform', with: 'Teradata'
     fill_in 'Database name', with: 'PROD_V'
     fill_in 'Table name', with: 'My Table Name'
@@ -17,6 +18,8 @@ feature 'User can manage template library : ' do
     fill_in 'Column format', with: 'My Column Format'
     fill_in 'Column precision', with: 'My Column Precision'
     fill_in 'Column scale', with: 'My Column Scale'
+    fill_in 'Sample sql', with: 'Select * from Table;'
+    fill_in 'Notes', with: 'These are notes'
     click_button 'Enter Template'
     
     within(:css, '#templates') do

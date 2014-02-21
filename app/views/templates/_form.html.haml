@@ -45,6 +45,12 @@
     .small-9.columns
       = f.text_area :sample_sql 
   .row
+    .small-3.columns
+      .right.inline= f.label :notes
+    .small-9.columns
+      = f.text_area :notes
+  .row
     .small-9.small-offset-3.columns
-      / %input{:type => "submit", :value=>"Add to Templates"}
-      = f.submit "Enter Template"
+      %input{:type => "submit", :class => "button", :value=>"Enter Template"}
+      /.button
+      /  = f.submit "Enter Template"
