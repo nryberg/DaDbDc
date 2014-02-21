@@ -21,6 +21,9 @@
 .value
   Fred
 
+%p= @sqltext
+
+%div= CodeRay.scan(@template.sample_sql)
 
 
 = link_to 'Change template', edit_template_path, class: "button radius"

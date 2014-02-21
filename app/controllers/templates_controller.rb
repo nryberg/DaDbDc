@@ -16,6 +16,8 @@ class TemplatesController < ApplicationController
 
   def show
     @template = Template.find(params[:id])
+    @sqltext = coderay(@template.sample_sql)
+    @notes_text = ""
   end
 
   def edit

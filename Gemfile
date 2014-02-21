@@ -37,6 +37,7 @@ gem "haml"
 gem "zurb-foundation"
 gem "foundation-rails"
 gem "libv8"
+gem "coderay"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
