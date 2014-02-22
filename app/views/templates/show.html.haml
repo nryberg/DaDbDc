@@ -13,6 +13,7 @@
     = @template.database_name
   %p.large-4.column 
     = @template.table_name
+%hr
 .row
   %h4.subheader.large-4.column 
     Column Name
@@ -26,6 +27,7 @@
     = @template.column_type
   %p.large-4.column 
     = @template.column_format
+%hr
 .row
   %h4.subheader.large-4.column 
     Column Precision
@@ -35,17 +37,17 @@
     = @template.column_name
   %p.large-8.column 
     = @template.column_type
+%hr
 .row
   %h4.subheader.large-12.columns
     Sample SQL
   %p.large-11.large-offset-1.columns
     = raw(@sqltext)
+%hr
 .row
   %h4.subheader.large-12.columns
     Notes
   %p.large-11.large-offset-1.columns
     (notes text) 
-
-
 
 = link_to 'Change template', edit_template_path, class: "button radius"
