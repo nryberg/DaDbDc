@@ -1,29 +1,51 @@
 %h3 
   Template
-.large-1-offset.columns
-  .row
-    %strong.large-2.column 
-      Platform
-    .large-9.columns
-      = @template.platform
-  .row
-    %strong.large-2.column 
-      Database
-    .large-9.columns
-      = @template.database_name
-  .row
-    %strong.large-2.column 
-      Table Name
-    .large-9.columns
-      = @template.table_name
-%h4
-  Test
-.value
-  Fred
+.row
+  %h4.subheader.large-4.column 
+    Platform
+  %h4.subheader.large-4.column 
+    Database 
+  %h4.subheader.large-4.column 
+    Table
+  %p.large-4.column 
+    = @template.platform
+  %p.large-4.column 
+    = @template.database_name
+  %p.large-4.column 
+    = @template.table_name
+.row
+  %h4.subheader.large-4.column 
+    Column Name
+  %h4.subheader.large-4.column 
+    Column Type 
+  %h4.subheader.large-4.column 
+    Column Format
+  %p.large-4.column 
+    = @template.column_name
+  %p.large-4.column 
+    = @template.column_type
+  %p.large-4.column 
+    = @template.column_format
+.row
+  %h4.subheader.large-4.column 
+    Column Precision
+  %h4.subheader.large-8.column 
+    Column Scale
+  %p.large-4.column 
+    = @template.column_name
+  %p.large-8.column 
+    = @template.column_type
+.row
+  %h4.subheader.large-12.columns
+    Sample SQL
+  %p.large-11.large-offset-1.columns
+    = raw(@sqltext)
+.row
+  %h4.subheader.large-12.columns
+    Notes
+  %p.large-11.large-offset-1.columns
+    (notes text) 
 
-%p= @sqltext
-
-%div= CodeRay.scan(@template.sample_sql)
 
 
 = link_to 'Change template', edit_template_path, class: "button radius"
