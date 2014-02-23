@@ -37,7 +37,13 @@ gem "haml"
 gem "zurb-foundation"
 gem "foundation-rails"
 gem "libv8"
+
+# Formatting for code
 gem "coderay"
+
+# Formatting for Markdown
+gem "redcarpet"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

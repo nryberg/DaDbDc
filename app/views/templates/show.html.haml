@@ -1,42 +1,54 @@
 %h3 
-  Template
-.row
-  %h4.subheader.large-4.column 
-    Platform
-  %h4.subheader.large-4.column 
-    Database 
-  %h4.subheader.large-4.column 
-    Table
-  %p.large-4.column 
-    = @template.platform
-  %p.large-4.column 
-    = @template.database_name
-  %p.large-4.column 
-    = @template.table_name
-%hr
-.row
-  %h4.subheader.large-4.column 
-    Column Name
-  %h4.subheader.large-4.column 
-    Column Type 
-  %h4.subheader.large-4.column 
-    Column Format
-  %p.large-4.column 
-    = @template.column_name
-  %p.large-4.column 
-    = @template.column_type
-  %p.large-4.column 
-    = @template.column_format
-%hr
-.row
-  %h4.subheader.large-4.column 
-    Column Precision
-  %h4.subheader.large-8.column 
-    Column Scale
-  %p.large-4.column 
-    = @template.column_name
-  %p.large-8.column 
-    = @template.column_type
+  Show Template
+%table.large-12.columns
+  %tr
+    %td.large-2.columns
+      %strong
+        Platform
+    %td.large-10.columns
+      = @template.platform
+  %tr
+    %td.large-2.columns
+      %strong
+        Database Name
+    %td.large-10.columns
+      = @template.database_name 
+  %tr
+    %td.large-2.columns
+      %strong
+        Table Name
+    %td.large-10.columns
+      = @template.table_name 
+  %tr
+    %td.large-2.columns
+      %strong
+        Column Name
+    %td.large-10.columns
+      = @template.column_name
+  %tr
+    %td.large-2.columns
+      %strong
+        Column Type
+    %td.large-10.columns
+      = @template.column_type
+  %tr
+    %td.large-2.columns
+      %strong
+        Column Format
+    %td.large-10.columns
+      = @template.column_format
+  %tr
+    %td.large-2.columns
+      %strong
+        Column Precision
+    %td.large-10.columns
+      = @template.column_precision
+  %tr
+    %td.large-2.columns
+      %strong
+        Column Scale
+    %td.large-10.columns
+      = @template.column_scale
 %hr
 .row
   %h4.subheader.large-12.columns
@@ -48,6 +60,6 @@
   %h4.subheader.large-12.columns
     Notes
   %p.large-11.large-offset-1.columns
-    (notes text) 
+    = markdown @template.notes
 
 = link_to 'Change template', edit_template_path, class: "button radius"
