@@ -11,4 +11,8 @@ module ApplicationHelper
     }
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
+
+  def title(page_title)
+    content_for :title, page_title.to_s
+  end
 end
