@@ -37,7 +37,7 @@ gem "haml"
 gem "zurb-foundation"
 gem "foundation-rails"
 gem "libv8"
-
+gem 'carrierwave'
 # Formatting for code
 gem "coderay"
 
