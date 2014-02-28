@@ -23,7 +23,7 @@ describe Store do
 
         store.aisles << aisle
 
-        expect(store.aisle[0]).to eq(aisle)
+        expect(store.aisles[0]).to eq(aisle)
     end
 
 end
