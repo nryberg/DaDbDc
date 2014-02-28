@@ -1,8 +1,10 @@
 require 'spec_helper'
 
 describe Store do
+
     it "should have a parent" do 
       mall = Mall.new(:name => "My Mall")
+  
       store = Store.new(:mall => mall)
 
       store_mall = store.mall 
