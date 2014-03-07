@@ -38,6 +38,7 @@ gem "zurb-foundation"
 gem "foundation-rails"
 gem "libv8"
 gem 'carrierwave'
+gem 'carrierwave-mongomapper', :git => 'git@github.com:brandonhilkert/carrierwave-mongomapper.git'
 # Formatting for code
 gem "coderay"
 

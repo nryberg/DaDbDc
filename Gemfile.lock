@@ -9,6 +9,14 @@ GIT
       mongo (~> 1.8)
       plucky (~> 0.6.5)
 
+GIT
+  remote: git@github.com:brandonhilkert/carrierwave-mongomapper.git
+  revision: 9bf26972a925bca228ad4d7fe9c4ac4e7a38490e
+  specs:
+    carrierwave-mongomapper (0.0.1)
+      carrierwave
+      mongo_mapper
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -180,6 +188,7 @@ DEPENDENCIES
   bson_ext
   capybara
   carrierwave
+  carrierwave-mongomapper!
   coderay
   coffee-rails (~> 4.0.0)
   database_cleaner
