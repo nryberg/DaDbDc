@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 feature "User can manage schema" do
-  scenario 'visiting list' do
-    visit extracts_path
+  scenario 'visiting columns' do
+    visit columns_path 
   end
-  scenario 'Uploading ' do
-    visit upload_extracts_path 
+  scenario 'Uploading schema' do
+    visit upload_columns_path 
   end
 end
