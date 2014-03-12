@@ -1,6 +1,11 @@
 = form_for(@template) do |f|
   .row
     .small-3.columns
+      .right.inline= f.label :platform
+    .small-9.columns
+      = f.text_field :platform
+  .row
+    .small-3.columns
       .right.inline= f.label :sample_sql
     .small-9.columns
       = f.text_area :sample_sql 
