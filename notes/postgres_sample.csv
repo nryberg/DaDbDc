@@ -1,0 +1,6 @@
+"name","database_name","schema","table","type","precision","scale","ordinal","server"
+"Primary_ID","testdb","pg_catalog","Postgresql_Secondary","integer",32,0,2,"192.168.0.100"
+"Secondary_Street","testdb","pg_catalog","Postgresql_Secondary","character varying",,,3,"192.168.0.100"
+"Secondary_ID","testdb","pg_catalog","Postgresql_Secondary","integer",32,0,4,"192.168.0.100"
+"Name","testdb","pg_catalog","Postgresql_Primary","character varying",,,4,"192.168.0.100"
+"Primary_ID","testdb","pg_catalog","Postgresql_Primary","integer",32,0,5,"192.168.0.100"

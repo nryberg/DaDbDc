@@ -1,46 +1,6 @@
 = form_for(@template) do |f|
   .row
     .small-3.columns
-      .right.inline= f.label :platform
-    .small-9.columns
-      = f.text_field :platform
-  .row
-    .small-3.columns
-      .right.inline= f.label :database_name
-    .small-9.columns
-      = f.text_field :database_name
-  .row
-    .small-3.columns
-      .right.inline= f.label :table_name
-    .small-9.columns
-      = f.text_field :table_name
-  .row
-    .small-3.columns
-      .right.inline= f.label :column_name
-    .small-9.columns
-      = f.text_field :column_name
-  .row
-    .small-3.columns
-      .right.inline= f.label :column_type
-    .small-9.columns
-      = f.text_field :column_type
-  .row
-    .small-3.columns
-      .right.inline= f.label :column_format
-    .small-9.columns
-      = f.text_field :column_format
-  .row
-    .small-3.columns
-      .right.inline= f.label :column_precision
-    .small-9.columns
-      = f.text_field :column_precision
-  .row
-    .small-3.columns
-      .right.inline= f.label :column_scale
-    .small-9.columns
-      = f.text_field :column_scale
-  .row
-    .small-3.columns
       .right.inline= f.label :sample_sql
     .small-9.columns
       = f.text_area :sample_sql 
