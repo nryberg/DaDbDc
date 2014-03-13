@@ -42,5 +42,12 @@ feature 'User can manage template library : ' do
     #save_and_open_page
   end
 
+  scenario 'Adds a schema to a template' do
+    visit root_path
+    click_link 'Upload Schema'
+  end
+
+
+
 end
 

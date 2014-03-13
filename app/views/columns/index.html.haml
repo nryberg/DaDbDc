@@ -7,8 +7,4 @@
     %th Schema
     %th Table
   = render @columns
-%form
-  = form_tag upload_columns_path do 
-    %div.large-6.columns
-      = file_field_tag :file, class: 'button right-round fa fa-search'
-      = submit_tag "Import", class: 'button right-round fa fa-search'
+
