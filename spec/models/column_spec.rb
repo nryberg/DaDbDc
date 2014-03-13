@@ -4,7 +4,7 @@ describe 'Column' do
   it "should accept basic information" do
     col = Column.new(:name => "fred")
     col.server = "Server"
-    col.database = "Database"
+    col.database_name = "Database"
     col.schema = "Schema"
     col.table = "Table"
     col.type = "Type"

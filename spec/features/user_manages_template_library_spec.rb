@@ -11,20 +11,12 @@ feature 'User can manage template library : ' do
     click_link 'Add Template'
     #save_and_open_page 
     fill_in 'Platform', with: 'Teradata'
-    fill_in 'Database name', with: 'PROD_V'
-    fill_in 'Table name', with: 'My Table Name'
-    fill_in 'Column name', with: 'My Column Name'
-    fill_in 'Column type', with: 'My Column Type'
-    fill_in 'Column format', with: 'My Column Format'
-    fill_in 'Column precision', with: 'My Column Precision'
-    fill_in 'Column scale', with: 'My Column Scale'
     fill_in 'Sample sql', with: 'Select * from Table;'
     fill_in 'Notes', with: 'These are notes'
     click_button 'Enter Template'
     
     within(:css, '#templates') do
       expect(page).to have_content('Teradata')
-      expect(page).to have_content('PROD_V')
     end
   end
 
