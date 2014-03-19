@@ -9,8 +9,7 @@ feature "User can manage schema" do
     visit root_path
     click_link 'Upload Schema'
     file_path = "/Users/Nick/Develop/DaDbDc/notes/postgres_sample.csv"
-    attach_file('file', file_path)
-    save_and_open_page
-    click_link "Submit"
+    attach_file 'file', file_path
+    click_button('Upload')
   end
 end
