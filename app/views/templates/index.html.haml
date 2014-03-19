@@ -8,4 +8,4 @@
     = render partial: "template", collection: @templates
 
 = link_to 'Add Template', new_template_path, class: "button radius"
-.button.radius= link_to 'Upload Schema'
+= link_to 'Upload Schema', upload_schema_path, class: "button radius"

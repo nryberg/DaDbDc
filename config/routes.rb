@@ -4,4 +4,6 @@ DaDbDc::Application.routes.draw do
   resources :columns do
     collection { post :upload}
   end
+
+  get '/upload_schema' => 'columns#upload_schema', as: 'upload_schema'
 end
