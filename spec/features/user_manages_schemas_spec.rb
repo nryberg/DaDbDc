@@ -10,8 +10,8 @@ feature "User can manage schema" do
     click_link 'Upload Schema'
     file_path = "/Users/Nick/Develop/DaDbDc/notes/postgres_sample.csv"
     attach_file 'file', file_path
-    find('input[type="submit"]').first.click
-
-
+    click_button('Upload')
+    
+    #save_and_open_page
   end
 end
