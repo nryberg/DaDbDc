@@ -17,4 +17,17 @@ feature "User can manage schema" do
     expect(page).to have_content('pg_catalog')
     #save_and_open_page
   end
+
+  scenario 'Processing schema' do
+    require 'csv'
+
+    file_path = "/Users/Nick/Develop/DaDbDc/notes/postgres_sample.csv"
+    infile = File.new(file_path)
+    Column.upload(infile)
+    visit columns_path
+    
+    expect(page).to have_content('pg_catalog')
+
+  end
+
 end
