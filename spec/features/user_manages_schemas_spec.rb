@@ -28,6 +28,14 @@ feature "User can manage schema" do
     
     expect(page).to have_content('pg_catalog')
 
+    cs = Column.all
+    expect(cs.count).to eq(5)
+
+    cs.each do |col|
+
+
+    end
+
   end
 
 end

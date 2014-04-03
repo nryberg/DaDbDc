@@ -1,7 +1,5 @@
-class Server
+class Table
   include MongoMapper::Document
 
   key :name, String
-  many :bases, :class_name => "Base"
-
 end
