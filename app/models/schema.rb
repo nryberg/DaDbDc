@@ -3,6 +3,6 @@ class Schema
 
   key :name, String
 
-  many :tables, :class_name => "Table"
+  many :tableaus, :class_name => "Tableau"
   belongs_to :base
 end

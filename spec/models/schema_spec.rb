@@ -21,13 +21,15 @@ describe Schema do
   it "should have child tables" do
     schema = Schema.new
     (1..4).each do |n|
-      table = Table.new
-      table.name = n
-      schema.tables << table
+      tableau = Tableau.new
+      tableau.name = n
+      schema.tableaus << tableau
     end
 
-    schema.tables[3].name.should eq ("4")
+    schema.tableaus[3].name.should eq ("4")
   end
+
+  it "should accept a null value for db's without schemas" 
 
 
 

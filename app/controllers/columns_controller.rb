@@ -8,11 +8,5 @@ class ColumnsController < ApplicationController
   def show
   end
 
-  def upload_schema
-  end
 
-  def upload 
-    Column.upload(params[:file])
-    redirect_to root_url, notice: "Columns imported."
-  end
 end

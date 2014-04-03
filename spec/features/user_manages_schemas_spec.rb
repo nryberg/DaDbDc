@@ -12,10 +12,9 @@ feature "User can manage schema" do
     attach_file 'file', file_path
     click_button('Upload')
    
-    visit columns_path
+    #visit columns_path
     
-    expect(page).to have_content('pg_catalog')
-    #save_and_open_page
+    #expect(page).to have_content('pg_catalog')
   end
 
   scenario 'Processing schema' do
@@ -23,16 +22,17 @@ feature "User can manage schema" do
 
     file_path = "/Users/Nick/Develop/DaDbDc/notes/postgres_sample.csv"
     infile = File.new(file_path)
-    Column.upload(infile)
-    visit columns_path
+    Loader.upload(infile)
+    visit loaders_path
     
+    #save_and_open_page
     expect(page).to have_content('pg_catalog')
 
-    cs = Column.all
-    expect(cs.count).to eq(5)
+    loader = Loader.all
+    expect(loader.count).to eq(5)
 
-    cs.each do |col|
-
+    loader.each do |col|
+      
 
     end
 
