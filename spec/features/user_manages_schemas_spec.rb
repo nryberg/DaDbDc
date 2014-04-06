@@ -31,8 +31,8 @@ feature "User can manage schema" do
     loader = Loader.all
     expect(loader.count).to eq(5)
 
-    loader.each do |col|
-      
+    loader.each do |load|
+      server = Server.find_or_create_by_name(load[:Server])  
 
     end
 
