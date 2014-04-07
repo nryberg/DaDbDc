@@ -36,8 +36,26 @@ feature "User can manage schema" do
     visit servers_path
 
     expect(page).to have_content('192.168.0.100')
+  end
 
+  scenario 'Build out tree of schema' do
+    require 'csv'
+
+    file_path = "/Users/Nick/Develop/DaDbDc/notes/postgres_sample.csv"
+    infile = File.new(file_path)
+    Loader.upload(infile)
+    visit loaders_path
     
+    loaders = Loader.all
+    forklift = Forklift.new
+    forklift.loaders = loaders
+    forklift.process_loads
+
+    visit servers_path
+
+    click_link '192.168.0.100'
+
+    expect(page).to have_content('testdb')
   end
 
 end

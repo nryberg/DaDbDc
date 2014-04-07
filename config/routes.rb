@@ -6,6 +6,7 @@ DaDbDc::Application.routes.draw do
   end
 
   resources :servers
+  resources :bases
 
 
   resources :loaders do 

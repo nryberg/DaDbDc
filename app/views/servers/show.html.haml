@@ -1,0 +1,7 @@
+%h2 Server :
+
+%h3= @server.name
+%table
+  %tr
+    %th Databases
+  = render partial: "base", collection: @server.bases
