@@ -28,14 +28,16 @@ feature "User can manage schema" do
     #save_and_open_page
     expect(page).to have_content('pg_catalog')
 
-    loader = Loader.all
-    expect(loader.count).to eq(5)
+    loaders = Loader.all
+    forklift = Forklift.new
+    forklift.loaders = loaders
+    forklift.process_loads
 
-    loader.each do |load|
-      server = Server.find_or_create_by_name(load[:Server])  
+    visit servers_path
 
-    end
+    expect(page).to have_content('192.168.0.100')
 
+    
   end
 
 end

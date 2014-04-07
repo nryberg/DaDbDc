@@ -6,11 +6,12 @@ class LoadersController < ApplicationController
     })
  end
 
-  def upload_schema
-  end
   def upload 
     Loader.upload(params[:file])
-    redirect_to root_url, notice: "Load imported."
+    forklift = Forklift.new
+    forklift.loaders = Loader.all
+    forklift.process_loads 
+    redirect_to servers_url, notice: "Load imported."
   end
 
 end

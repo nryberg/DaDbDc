@@ -5,6 +5,9 @@ DaDbDc::Application.routes.draw do
     collection { post :upload}
   end
 
+  resources :servers
+
+
   resources :loaders do 
     collection { post :upload}
   end

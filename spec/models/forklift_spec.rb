@@ -33,5 +33,10 @@ describe Forklift do
 
     @forklift.process_loads
 
+    servers = Server.all
+    expect(servers.count).to eq(1)
+    expect(servers[0].bases.count).to eq(1)
+
+
   end
 end
