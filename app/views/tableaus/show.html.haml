@@ -1,0 +1,8 @@
+%h2 Table
+
+%h3= "Name: #{@tableau.name}"
+
+%table
+  %tr
+    %th Columns
+  = render partial: "column", collection: @tableau.columns

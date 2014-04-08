@@ -54,8 +54,10 @@ feature "User can manage schema" do
     visit servers_path
 
     click_link '192.168.0.100'
-
-    expect(page).to have_content('testdb')
+    click_link 'testdb'
+    click_link 'pg_catalog'
+    click_link 'Postgresql_Primary'
+    expect(page).to have_content('Postgresql_Primary')
   end
 
 end

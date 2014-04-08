@@ -1,0 +1,9 @@
+%h2 Schemas
+
+%h3= "Name: #{@schema.name}"
+
+%table
+  %tr
+    %th Tables
+  = render partial: "tableau", collection: @schema.tableaus
+ 

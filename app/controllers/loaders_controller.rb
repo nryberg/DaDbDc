@@ -12,6 +12,8 @@ class LoadersController < ApplicationController
     forklift.loaders = Loader.all
     forklift.process_loads 
     redirect_to servers_url, notice: "Load imported."
+
+    Loader.destroy_all
   end
 
 end
