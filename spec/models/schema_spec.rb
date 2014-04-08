@@ -28,9 +28,4 @@ describe Schema do
 
     schema.tableaus[3].name.should eq ("4")
   end
-
-  it "should accept a null value for db's without schemas" 
-
-
-
 end

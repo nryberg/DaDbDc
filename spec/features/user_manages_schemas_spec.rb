@@ -57,7 +57,7 @@ feature "User can manage schema" do
     click_link 'testdb'
     click_link 'pg_catalog'
     click_link 'Postgresql_Primary'
-    expect(page).to have_content('Postgresql_Primary')
+    expect(page).to have_content('Name')
   end
 
 end
