@@ -4,5 +4,5 @@ class Tableau
   key :name, String
   belongs_to :schema
 
-  many :columns, :class_name => "Column"
+  many :columns, :class_name => "Column", order: :ordinal
 end

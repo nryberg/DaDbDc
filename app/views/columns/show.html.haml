@@ -1,1 +1,13 @@
 %h2 Column
+
+%h3= "Name: #{@column.name}"
+%h4= "Type: #{@column.type}"
+%h4= "Precision: #{@column.precision}"
+%h4= "Scale: #{@column.scale}"
+%h4= "Ordinal: #{@column.ordinal}"
+
+%table
+  %tr
+    %th Tables
+  = render partial: "tableau", collection: @tableaus
+
