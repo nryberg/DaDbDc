@@ -1,9 +1,20 @@
-%h2 Table
+.large-8.columns
+  %h2 Table - #{@tableau.name}
 
-%h3= "Name: #{@tableau.name}"
+  %table
+    %tr
+      %th Columns
+      %th Type
+    = render partial: "column", collection: @tableau.columns
 
-%table
-  %tr
-    %th Columns
-    %th Type
-  = render partial: "column", collection: @tableau.columns
+.large-2.columns
+  %h3 Tree
+  .row
+    %h5.large-1.columns Server
+    %h5.large-1.columns= link_to @server.name, @server
+  .row
+    %h5.large-1.columns Database
+    %h5.large-1.columns= link_to @base.name, @base
+  .row
+    %h5.large-1.columns Schema
+    %h5.large-1.columns= link_to @schema.name, @schema

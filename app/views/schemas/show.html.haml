@@ -1,9 +1,12 @@
-%h2 Schemas
+.large-8.columns
+  %ul.breadcrumbs
+    %li= link_to "Serv: #{@server.name}", @server
+    %li= link_to "DB: #{@base.name}", @base
 
-%h3= "Name: #{@schema.name}"
+  %h2 Schema : #{@schema.name}
 
-%table
-  %tr
-    %th Tables
-  = render partial: "tableau", collection: @schema.tableaus
- 
+  %table
+    %tr
+      %th Tables
+    = render partial: "tableau", collection: @schema.tableaus
+
