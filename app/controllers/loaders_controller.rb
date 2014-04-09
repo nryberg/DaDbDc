@@ -7,13 +7,19 @@ class LoadersController < ApplicationController
  end
 
   def upload 
-    Loader.upload(params[:file])
-    forklift = Forklift.new
-    forklift.loaders = Loader.all
-    forklift.process_loads 
-    redirect_to servers_url, notice: "Load imported."
+    source = params[:file]
 
-    Loader.destroy_all
+    if source == "" || source.nil?
+      redirect_to upload_schema_path, notice: "You must choose a source file."
+    else
+      Loader.upload(source)
+      forklift = Forklift.new
+      forklift.loaders = Loader.all
+      forklift.process_loads 
+      redirect_to servers_url, notice: "Load imported."
+
+      Loader.destroy_all
+    end
   end
 
 end

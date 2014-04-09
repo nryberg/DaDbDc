@@ -17,7 +17,13 @@
     <%= render "layouts/topnav" %>
     <div class="row">
       <div class="large-8 columns">
-        <%= yield %>
+         <% flash.each do |name, msg| -%>
+          <div data-alert class="alert-box">
+            <%= content_tag :div, msg, class: name %>
+            <a href="#" class="close">&times;</a>
+          </div> 
+        <% end -%>
+       <%= yield %>
       </div>
     </div>
     <%= javascript_include_tag "application" %>
