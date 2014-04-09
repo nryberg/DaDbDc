@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'User can manage template library : ' do
   scenario 'Viewing the library' do
     visit root_path
-    expect(page).to have_content("Welcome to the template library")
+    expect(page).to have_content("Templates")
   end
 
   scenario 'Adds a template to the library' do
