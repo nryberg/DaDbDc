@@ -8,6 +8,7 @@ DaDbDc::Application.routes.draw do
   resources :columns
 
 
+  match '/faq', :to => redirect('/faq.html'), via: [:get]
 
   resources :loaders do 
     collection { post :upload}

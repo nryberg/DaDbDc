@@ -67,4 +67,4 @@ group :test do
   gem "database_cleaner"
   gem "launchy"
 end
-
+gem 'high_voltage', '~> 2.1.0'

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- work this back in later <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>  -->
-    <title>Database Schema Documentation Tool</title>
-
+    <title><%= content_for?(:page_title) ? yield(:page_title) : "DaDbDc" %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "coderay" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -14,6 +13,8 @@
   </head>
 
   <body>
+    <%= content_for :page_title, 'Database Schema Documentation Tool'%> 
+    <%= render "layouts/topnav" %>
     <div class="row">
       <div class="large-8 columns">
         <%= yield %>

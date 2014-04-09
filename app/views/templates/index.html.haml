@@ -1,10 +1,10 @@
-%h2 Welcome to the template library
+= content_for :page_title, 'DaDbDc - Templates'
+%h2 Templates
 
 #templates
   %table
     %tr
       %th Platform
-      %th Database
     = render partial: "template", collection: @templates
 
 = link_to 'Add Template', new_template_path, class: "button radius"
