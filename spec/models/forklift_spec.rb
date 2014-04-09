@@ -37,6 +37,9 @@ describe Forklift do
     expect(servers.count).to eq(1)
     expect(servers[0].bases.count).to eq(1)
 
+    columns = Column.all
+    expect(columns.count).to eq(5)
+
 
   end
 end
