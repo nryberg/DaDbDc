@@ -68,3 +68,6 @@ group :test do
   gem "launchy"
 end
 gem 'high_voltage', '~> 2.1.0'
+
+gem 'navvy'
+
