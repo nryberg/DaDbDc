@@ -1,13 +1,18 @@
-%h2 Column
+.large-9.columns
+  %ul.breadcrumbs
+    %li= link_to "Srv: #{@server.name}", @server
+    %li= link_to "DB: #{@base.name}", @base
+    %li= link_to "Sch: #{@schema.name}", @schema
+    %li= link_to "Tbl: #{@tableau.name}", @tableau
+ 
+  %h2 Column : #{@column.name}
+  %h4= "Type: #{@column.type}"
+  %h4= "Precision: #{@column.precision}"
+  %h4= "Scale: #{@column.scale}"
+  %h4= "Ordinal: #{@column.ordinal}"
 
-%h3= "Name: #{@column.name}"
-%h4= "Type: #{@column.type}"
-%h4= "Precision: #{@column.precision}"
-%h4= "Scale: #{@column.scale}"
-%h4= "Ordinal: #{@column.ordinal}"
-
-%table
-  %tr
-    %th Tables
-  = render partial: "tableau", collection: @tableaus
+  %table
+    %tr
+      %th Tables
+    = render partial: "tableau", collection: @tableaus
 

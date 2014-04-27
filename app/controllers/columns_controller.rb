@@ -12,6 +12,10 @@ class ColumnsController < ApplicationController
     @tableaus = Array.new
     @columns = Column.all(:name => @column.name)
     @columns.collect! {|col| @tableaus << col.tableau}
+    @tableau = @column.tableau
+    @schema = @tableau.schema
+    @base = @schema.base
+    @server = @base.server
   end
 
   private 

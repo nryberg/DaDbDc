@@ -12,6 +12,9 @@ class LoadersController < ApplicationController
     if source == "" || source.nil?
       redirect_to upload_schema_path, notice: "You must choose a source file."
     else
+      loader = Loader.new
+      #puts loader.nil?
+      #Navvy::Job.enqueue(Loader, :upload, source)
       Loader.upload(source)
       forklift = Forklift.new
       forklift.loaders = Loader.all
