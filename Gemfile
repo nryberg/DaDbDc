@@ -68,7 +68,4 @@ group :test do
   gem "launchy"
 end
 gem 'high_voltage', '~> 2.1.0'
-
-gem 'delayed_job'
-#gem 'delayed_job_mongo_mapper', :git => "git://github.com/thisduck/delayed_job_mongo_mapper.git"
-#gem 'delayed_job_mongo_mapper', github: 'rsslldnphy/delayed_job_mongo_mapper'
+gem 'whenever', require: false
